@@ -13,10 +13,11 @@ app.get('/', function (req, res) {
   res.end(JSON.stringify(response))
 })
 
-app.get('/:id', function (req, res) {
-  console.log('GET /:id request received')
+//que busque por nombre
+app.get('/:name', function (req, res) {
+  console.log('GET /:name request received')
   res.writeHead(200, {'Content-Type': 'application/json'})
-  var response = { "response" : "This is GET method with id=" + req.params.id + "." }
+  var response = { "response" : "This is GET method with name=" + req.params.name + "." }
   console.log(response)
   res.end(JSON.stringify(response))
 })
